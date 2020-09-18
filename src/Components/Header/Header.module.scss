@@ -1,0 +1,60 @@
+@import "../../App.modules";
+.Header {
+    padding: 20px;
+    font-family: "Lobster", cursive;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $MainColor;
+    flex-wrap: wrap;
+    font-size: 2rem;
+    h1 {
+        min-width: 100%;
+    }
+    form {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        .Input {
+            font-size: 1rem;
+            background-color: #edeff0;
+            border: solid 3px #d7dbdf;
+            outline: none;
+            min-height: 30px;
+            min-width: 300px;
+        }
+        button {
+            border: none;
+            outline: none;
+        }
+        .Button {
+            color: $MainColor !important;
+            &:disabled {
+                border: none;
+                cursor: not-allowed;
+            }
+            &:enabled {
+                background-color: $MainColor;
+                cursor: pointer;
+            }
+        }
+        .ButtonsContainer {
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: space-around;
+            button {
+                background-color: $MainColor;
+                color: #fff;
+                min-width: 15%;
+                border: none;
+                padding: 5px 10px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        }
+    }
+}
