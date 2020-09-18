@@ -1,15 +1,12 @@
 @import "../../App.modules";
 .Header {
-    padding: 20px;
     font-family: "Lobster", cursive;
-    min-height: 200px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    color: $MainColor;
     flex-wrap: wrap;
     font-size: 2rem;
     h1 {
+        color: $MainColor;
         min-width: 100%;
     }
     form {
@@ -21,29 +18,30 @@
             font-size: 1rem;
             background-color: #edeff0;
             border: solid 3px #d7dbdf;
-            outline: none;
             min-height: 30px;
             min-width: 300px;
         }
-        button {
+        button,
+        input {
             border: none;
             outline: none;
+            border-radius: 5px;
         }
         .Button {
             color: $MainColor !important;
+            background-color: #d7dbdf;
             &:disabled {
                 border: none;
                 cursor: not-allowed;
             }
             &:enabled {
-                background-color: $MainColor;
                 cursor: pointer;
             }
         }
         .ButtonsContainer {
             margin-top: 30px;
-            display: flex;
-            flex-wrap: wrap;
+            display: inherit;
+            flex-wrap: inherit;
             width: 100%;
             justify-content: space-around;
             button {

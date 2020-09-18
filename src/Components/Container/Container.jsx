@@ -9,21 +9,10 @@ function Container({ searchTerm }) {
     const { images, loading, fetchImages } = useContext(PhotoContext);
 
     useEffect(() => {
-        if (searchTerm) {
-            fetchImages(searchTerm);
-        }
-        else {
-            fetchImages("Mountain");
-        }
-    }, [searchTerm, fetchImages]);
-
-
-    if (loading) {
-        return <Loader />
-    }
-    else {
-        return <Gallery data={images} />
-    }
+        fetchImages(searchTerm ? searchTerm : "mountain");
+    }, [searchTerm]);
+    
+    return loading ?  <Loader /> :  <Gallery data={images} />
 }
 
-export default Container
+export default Container;

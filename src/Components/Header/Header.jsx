@@ -7,7 +7,7 @@ function Header({ handleSubmit }) {
     return (
         <div className={ClassNames.Header}>
             <h1>SnapShot</h1>
-            <Form handleSubmit={handleSubmit} />
+            <Form handleSubmit={handleSubmit}/>
         </div>
     )
 }
