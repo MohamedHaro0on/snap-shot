@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
 import ClassNames from "./Header.module.scss";
 
-function Form({ handleSubmit }) {
+const Form = ({ handleSubmit }) => {
 
     const [searchTerm, setSearchTerm] = useState("");
 
-    function handleChange(e) {
+    const handleChange = (e) => {
         setSearchTerm(e.target.value)
     }
 
-    function handleClick(e, searchTerm) {
+    const handleClick = (e, searchTerm) => {
         handleSubmit(e, searchTerm);
     }
 

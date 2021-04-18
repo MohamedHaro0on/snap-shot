@@ -14,7 +14,6 @@ const PhotoContextProvider = props => {
         axios.get(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apikey}&tags=${query}&per_page=24&format=json&nojsoncallback=1`)
         .then(response => {
             setImages(response?.data?.photos.photo)
-            console.log("the Response of the Images", response.data.photos)
         }).catch(error => {
             console.log("THe Error", error);
         }).then(function () {

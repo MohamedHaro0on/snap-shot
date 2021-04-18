@@ -4,7 +4,7 @@ import { PhotoContext } from '../../Context/Context'
 import Gallery from '../Gallery/Gallery';
 import Loader from '../Loader/Loader';
 
-function Container({ searchTerm }) {
+const  Container = ({ searchTerm })=> {
 
     const { images, loading, fetchImages } = useContext(PhotoContext);
 

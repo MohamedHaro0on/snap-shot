@@ -2,7 +2,7 @@ import React from 'react'
 import Form from './Form';
 import ClassNames from "./Header.module.scss";
 
-function Header({ handleSubmit }) {
+const Header =({ handleSubmit })=> {
 
     return (
         <div className={ClassNames.Header}>

@@ -4,11 +4,11 @@ import Container from './Components/Container/Container';
 import Header from './Components/Header/Header';
 import PhotoContextProvider from './Context/Context';
 
-function App() {
+const App = () => {
 
   const [searchTerm, setSearchTerm] = useState(null);
 
-  function handleSubmit(e, value) {
+  const handleSubmit = (e, value) => {
     e.preventDefault();
     setSearchTerm(value);
   }
